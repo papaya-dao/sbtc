@@ -13,8 +13,6 @@ export function buildTransactionDeposit(
 ) {
   bitcoin.initEccLib(ecc);
 
-  // const p2tr = btc.p2tr(depositWalletPublicKey);
-
   const pubkey = typeof depositWalletPublicKey === 'string'
       ? hexToBytes(depositWalletPublicKey)
       : depositWalletPublicKey || btc.TAPROOT_UNSPENDABLE_KEY;
