@@ -21,9 +21,7 @@ export function buildTransactionDeposit(
       type: 'tr',
       script: btc.OutScript.encode({ type: 'tr', pubkey }),
       address: btc.Address(network).encode({ type: 'tr', pubkey }),
-      // For tests
       tweakedPubkey: pubkey,
-      // PSBT stuff
       tapInternalKey: pubkey,
   };
 
