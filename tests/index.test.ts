@@ -2,6 +2,7 @@ import * as btc from '@scure/btc-signer';
 import { buildTransactionDeposit } from '../src/index'
 import { bytesToHex as toHex, hexToBytes } from '@noble/hashes/utils';
 
+// values pulled from output of successful rust test that communicates with bitcoind to test transaction acceptance in mempool 
 
 let testCases = [
   {
@@ -47,8 +48,6 @@ describe('buildTransactionDeposit', () => {
     const satoshis = BigInt(1000);
     for (let i = 0; i < testCases.length; i++) {
         const {depositWalletHex, stxAddressHex, txid, outputZeroScriptHex, outputOneScriptHex } = testCases[i];
-
-        // values pulled from output of successful rust test that communicates with bitcoind to test transaction acceptance in mempool 
         const depositWalletPublicKey = Buffer.from(hexToBytes(depositWalletHex));
         const stxAddress = Buffer.from(hexToBytes(stxAddressHex));
 
