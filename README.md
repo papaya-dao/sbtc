@@ -1,0 +1,5 @@
+# @papaya-dao/sbtc
+This package can be used to create sBTC Deposit PSBTs which can be broadcast to wallet providers signed or for signing/use within external applications. Refer to individual wallet documentation such as [Leather's](https://leather.gitbook.io/developers/bitcoin/sign-transactions/partially-signed-bitcoin-transactions-psbts) for details on how to sign these PSBTs within your application.
+
+# Who should use this?
+The original goal was to create a collection of scripts/functions to facilitate the onboarding of sBTC derived from PoX rewards on behalf of a protocol. It is our recommendation that the method made available here _not_ be used by protocols, as this is not a trustless system. To read about our research into a trustless decentralized sBTC onboarding system, take a look at [BOSS](https://github.com/papaya-dao/papaya/blob/main/docs/boss.md) which is our reccomended approach for protocols needing to onboard PoX rewards and participate in sBTC signing operations.
